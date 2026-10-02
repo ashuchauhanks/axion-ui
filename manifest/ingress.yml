@@ -16,3 +16,37 @@ spec:
             name: axion-ui
             port:
               number: 80
+
+
+  - host: api-telequery.ashutosh.sbs
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: axion-telemetry-query-service
+            port:
+              number: 8000
+
+  - host: api-ingestion.ashutosh.sbs
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: axion-ingestion-service
+            port:
+              number: 8000
+            
+  - host: api-s.ashutosh.sbs
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: axion-ingestion-service
+            port:
+              number: 8000
