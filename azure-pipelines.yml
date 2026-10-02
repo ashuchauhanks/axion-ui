@@ -83,6 +83,7 @@ stages:
         manifests: |
           manifest/deployment.yml
           manifest/service.yml
+          manifest/ingress.yml
         containers: 'acrashudevka.azurecr.io/axion-ui:$(Build.BuildId)'
 
 
